@@ -37,8 +37,30 @@
             End
         Else
             Me.Text = "AWSFormSample -- " + wTitle
+
+            'からの
+            'IAMからパーミッション情報を取得して表示（予定）
+
         End If
 
+    End Sub
+
+    Private Sub btnEC2_Click(sender As Object, e As EventArgs) Handles btnEC2.Click
+        Dim f As New frmAWSEC2
+        f._AWSid = _AWSID
+        f._AWSKey = _AWSKEY
+        f._AWSRegion = Amazon.RegionEndpoint.APNortheast1
+        f.ShowDialog()
+        f.Dispose()
+    End Sub
+
+
+    Private Sub btnBilling_Click(sender As Object, e As EventArgs) Handles btnBilling.Click
+        Dim f As New frmAWSBilling
+        f._AWSid = _AWSID
+        f._AWSKey = _AWSKEY
+        f.ShowDialog()
+        f.Dispose()
     End Sub
 
 End Class

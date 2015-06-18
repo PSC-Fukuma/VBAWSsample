@@ -22,16 +22,40 @@ Partial Class frmMain
     'コード エディターを使って変更しないでください。
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.btnBilling = New System.Windows.Forms.Button()
+        Me.btnEC2 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
+        '
+        'btnBilling
+        '
+        Me.btnBilling.Location = New System.Drawing.Point(48, 200)
+        Me.btnBilling.Name = "btnBilling"
+        Me.btnBilling.Size = New System.Drawing.Size(115, 55)
+        Me.btnBilling.TabIndex = 0
+        Me.btnBilling.Text = "Billing"
+        Me.btnBilling.UseVisualStyleBackColor = True
+        '
+        'btnEC2
+        '
+        Me.btnEC2.Location = New System.Drawing.Point(48, 65)
+        Me.btnEC2.Name = "btnEC2"
+        Me.btnEC2.Size = New System.Drawing.Size(115, 55)
+        Me.btnEC2.TabIndex = 1
+        Me.btnEC2.Text = "EC2"
+        Me.btnEC2.UseVisualStyleBackColor = True
         '
         'frmMain
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(526, 314)
+        Me.ClientSize = New System.Drawing.Size(371, 277)
+        Me.Controls.Add(Me.btnEC2)
+        Me.Controls.Add(Me.btnBilling)
         Me.Name = "frmMain"
         Me.Text = "frmMain"
         Me.ResumeLayout(False)
 
     End Sub
+    Friend WithEvents btnBilling As System.Windows.Forms.Button
+    Friend WithEvents btnEC2 As System.Windows.Forms.Button
 End Class
